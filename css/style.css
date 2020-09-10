@@ -1,14 +1,13 @@
 body {
-    background-color: #b9c1e2;
+    background-color: #e1e1e4;
     margin: 0;
     color: black;
 }
 
 #main-col {
-    background-color:#efe2ba;
+    background-color: #efe2ba;
     width: 960px;
     min-height: 100vh;
-    text-align: center;
     margin: 0 auto;
     box-shadow: 0 0 5px black;
     box-sizing: border-box;
@@ -19,9 +18,8 @@ header {
     color: black;
     text-align: center;
     padding-bottom: 50px;
-    background-color:	#ffbb01;
+    background-color: #ffbb01;
     padding-top: 50px;
-    margin-top: 0;
 }
 
 #intro-text {
@@ -37,7 +35,7 @@ header {
 }
 
 #topic-header {
-    padding-top: 10px;
+    padding-top: 40px;
     padding-left: 30px;
     text-align: left;
 }
@@ -55,38 +53,46 @@ header {
 }
 
 #background {
-  background: #333;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
+    background: #333;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 /* demo css code */
+
 .typewriter {
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden; 
-  border-right: .15em solid orange; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; 
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange
+    }
 }
+
 /* end demo code */
 
 #p2 {
@@ -109,7 +115,12 @@ header {
 #p6 {
     text-align: center;
     padding: 25px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     font: sans-serif;
     font-size: 25px;
+}
+
+#back-to-main {
+    text-align: center;
+    padding-bottom: 30px;
 }
