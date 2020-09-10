@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="main-col">
+        <header>
+            <h1>Web Dev Blog</h1>
+            <h2>Jenna Horrall</h2>
+        </header>
+        <div id="topic-header">
+            <h2>Typewriter effect</h2>
+        </div>
+        <div id="main-text">
+            <p id="p1">While reading this <a href="https://www.freelancer.com/articles/web-development/css-tips-and-tricks"target="_blank">blog post</a>
+            about cool things you can do with CSS, I came across this really cool typewriter effect. You usually only see this typewriter effect
+            when you are the user typing something yourself, so I thought it was cool that this effect can be displayed to the user when on a webpage.
+            I do wish that this effect would loop instead of just typing the word out and stopping at that point. Here is the effect:</p>
+
+            <div id="background"> 
+                <div class="typewriter">
+                    <p>hellooooo!!!</p>
+                </div>
+            </div>
+
+            <p id="p2"> The code I gathered from this <a href="https://css-tricks.com/snippets/css/typewriter-effect/"target="_blank">demo</a>
+                was pretty straightforward. Side note: I really liked that website because it has a bunch of tutorials and videos for
+                really specific HTML/CSS features and beginner videos, I will probably reference that site again! Anyways, back to the
+                code. The bulk of the code was CSS animation. Here is the main CSS code from the above demo:</p>
+
+            <div>
+                <pre class="html-code-snippet">
+                    #background {
+                        background: #333;
+                        padding-top: 2em;
+                        padding-bottom: 2em;
+                        width: 400px;
+                        display: flex;
+                        justify-content: center;
+                        margin: auto;
+                      }
+                      
+                      /* DEMO-SPECIFIC STYLES */
+                      .typewriter {
+                        color: #fff;
+                        font-family: monospace;
+                        overflow: hidden; /* Ensures the content is not revealed until the animation */
+                        border-right: .15em solid orange; /* The typwriter cursor */
+                        white-space: nowrap; /* Keeps the content on a single line */
+                        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                        letter-spacing: .15em; /* Adjust as needed */
+                        animation: 
+                          typing 3.5s steps(30, end),
+                          blink-caret .5s step-end infinite;
+                      }
+                      
+                      /* The typing effect */
+                      @keyframes typing {
+                        from { width: 0 }
+                        to { width: 100% }
+                      }
+                      
+                      /* The typewriter cursor effect */
+                      @keyframes blink-caret {
+                        from, to { border-color: transparent }
+                        50% { border-color: orange }
+                      }
+                </pre>
+            </div>
+            <p id="p3">
+                The first background selector is aimed at the black background portion. It adds some padding, sets the width, margins,
+                and centers the element. The second selector is aimed at the typewriter class which is located within the background 
+                div element in the HTML code.
+                
+                I did some further research on the animation and overflow tags because these were both new to me and the demo did not
+                go into detail about them. According to this 
+                <a href="https://www.w3schools.com/cssref/pr_pos_overflow.asp"target="_blank">doc</a> on w3schools,
+                <b>the overflow property "specifies what should happen if content overflows an element's box."</b> This propoerty ensures that the
+                text does not show until the cursor moves past it. 
+            </p>
+            <p id= "p4">
+                The animation tag was definitely new to me so I was excited to explore
+                this one. After looking through this <a href="https://www.w3schools.com/cssref/css3_pr_animation.asp"target="_blank">doc</a>
+                about CSS animations, I learned that there are actually two different animations under the 'main' animation property. 
+                <b>The final animation in the typewriter effect is a combination of both the typing and blink-caret effect. </b>
+                The <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp"target="_blank">keyframes</a>
+                sections are actually rules, not selectors which I have been used to. Keyframes specify the code of the animation,
+                or where on the screen the animation moves and at what point. For example, the 'typing' animation moves from
+                width 0 (of the element with the class typewriter) to width 100%, meaning the end of the element. 
+            </p>
+            <p id= "p5">
+                I really enjoyed learning about this cool feature, I didn't realize CSS had that functionality. For some reason
+                I always associated animations with JavaScript, I'm not sure why.
+            </p>
+            <p id= "p6">
+                <b>...until next week!</b>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
