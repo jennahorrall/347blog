@@ -1,11 +1,11 @@
 body {
-    background-color: #e1e1e4;
+    background-color: #e0dfdf;
     margin: 0;
     color: black;
 }
 
 #main-col {
-    background-color: #efe2ba;
+    background-color: #f8edce;
     width: 960px;
     min-height: 100vh;
     margin: 0 auto;
@@ -13,12 +13,12 @@ body {
     box-sizing: border-box;
 }
 
-header {
+.top-header {
     font-size: large;
     color: black;
     text-align: center;
     padding-bottom: 50px;
-    background-color: #ffbb01;
+    background-color: #eea07c;
     padding-top: 50px;
 }
 
@@ -34,14 +34,23 @@ header {
     padding: 20px;
 }
 
+.blog-list-items {
+    text-align: left;
+    padding-left: 160px;
+}
+
+.blog-item {
+    padding: 10px;
+}
+
 #topic-header {
-    padding-top: 40px;
-    padding-left: 30px;
+    padding: 40px;
     text-align: left;
 }
 
 #main-text {
     padding: 40px;
+    padding-top: 10px;
 }
 
 .css-code-snippet {
@@ -120,7 +129,62 @@ header {
     font-size: 25px;
 }
 
-#back-to-main {
+#button-container {
     text-align: center;
-    padding-bottom: 30px;
+    padding: 30px;
+}
+
+#back-to-main {
+    font-size: 14px;
+    padding: 10px;
+}
+
+#button-group {
+    text-align: center;
+    padding: 40px;
+}
+
+#button-item {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.subheader {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#bad-color-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: darkblue;
+    height: 70px;
+    width: 200px;
+    border: solid red 2px;
+}
+
+#bad-color-text {
+    text-align: center;
+}
+
+
+#good-color-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgb(203, 203, 219);
+    height: 70px;
+    width: 200px;
+    border: solid rgb(112, 104, 104) 2px;
+}
+
+#good-color-text {
+    text-align: center;
 }

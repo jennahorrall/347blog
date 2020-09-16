@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Blog 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="main-col">
+        <header class="top-header">
+            <h1>Web Dev Blog</h1>
+            <h2>Jenna Horrall</h2>
+        </header>
+        <div id="topic-header">
+            <header>
+                <h2>Developing Accessible Web Pages</h2>
+            </header>
+        </div>
+        <div id="main-text">
+            <p>Developing accessible web pages is very important as a web developer. As our world is becoming dependent on the Internet
+                for more of our daily tasks, we have to take into account accessibility features and make sure everyone can view the
+                content we are serving out. I think that all web developers should be aware of accessiblity features and apply those
+                concepts when writing code.
+            </p>
+            <p>
+                According to this 
+                <a href="https://www.accessiblemetrics.com/blog/4-key-takeaways-from-2018-web-accessibility-lawsuits/" 
+                target="_blank">site</a>, <b>2,250 lawsuits were filed for inadequate web accessiblity in 2018</b>. Suits range from large companies
+                such as Netflix to small companies. I think that people should incorporate accessbility features because it's the right thing
+                do, not because they fear a lawsuit (although if that's what it takes so be it.) 
+                With the help of <a href="https://www.dreamhost.com/blog/make-your-website-accessible/" target="_blank">this</a> 
+                blog post, I am going to dicuss how to apply a few important accessibility features.
+            </p>
+            <header class="subheader">
+                <h3>Tab Navigation</h3>
+            </header>
+            <p>
+                One important accessibility feature is tab navigation, or the ability to navigate the page
+                 using the physical tab button on your keyboard.
+                This feature is important for people who may not be able to view the screen, but have the ability to use
+                the keyboard.
+                So, let's try it out. I'm going to add two different buttons below.
+            </p>
+            <div id="button-group">
+                <button id="button-item"onclick="location.href='blog1.html'" type="button">Blog 1</button> 
+                <button id="button-item"onclick="location.href='index.html'" type="button">Back To Home</button> 
+            </div>
+            <p>
+                I added two buttons: blog 1 and back to home. You can loop through the buttons on the screen
+                using the tab button on the keyboard and go to the actual page
+                by hitting the enter button on the keyboard. As important as it is to have the ability to
+                tab between buttons, I think the feature of navigating between pages using those buttons is just as important. If you 
+                tab through this screen, you can see that you can tab through the buttons, but not hyperlinks. Because of this,
+                <b>buttons are of better use to navigate between screens instead of plain hyperlinks.</b> 
+            </p>
+
+            <header class="subheader">
+                <h3>Color Constrast</h3>
+            </header>
+
+            <p>
+                The next important feature that all web pages should have is good color contrast. People view color in different
+                ways, therefore everyone on that spectrum should have the ability to view the content on the webpage regardless
+                of their abiity to see color in the "same way" as everyone else. Below is an example of bad color contrast:
+            </p>
+
+            <div id="bad-color-parent">
+                <div id="bad-color-text">
+                    Yikes :/
+                </div>
+            </div>
+
+            <p>
+                The text does not show up well at all, and the background color makes the text hard to see (and painful to look at).
+                Here is an example of good color contrast:
+            </p>
+
+            <div id="good-color-parent">
+                <div id="good-color-text">
+                    Yay!!! :)
+                </div>
+            </div>
+
+            <p>
+                In the above example, the colors go together well and you can easily see the content within the container. 
+                The blog says that "ideally, you should set a dark color against a lighter one." Let's test the above color
+                combinations in this <a href="https://contrastchecker.com/" target="_blank"> contrast checker</a> 
+                site to test that hypothesis. Uhh... yeah the first one failed all of the tests.
+                The second one on the other hand passed all of the tests. This site is nice because you can switch on
+                a grayscale viewer that allows you to see what the result would be for someone who is colorblind. 
+            </p>
+
+            <header class="subheader">
+                <h3>Header Navigation</h3>
+            </header>
+
+            <p>
+                The next important feature of an accessible website is having clearly labeled headers. I had to fix my code
+                a bit to comply with these standards. It doesn't sound like a pressing issue when coding, but it is really 
+                important for people who rely on readers to go through web pages. For instance, you should not include two 
+                different h1 headers on the page as that can get confusing for people who rely on readers. 
+            </p>
+            <p>
+                On this web page,
+                the big header at the top uses an h1 tag to relay it's importance as the main header. My name beneath it
+                is in a h2 tag, because it's important but not as important as h1. The subsequent "sub-headers" on the page
+                all use the h3 tag because they are the next "level" in header importance. If I wanted to break up this section into
+                two subsequent sections, I would label both of those headers using the h4 tag because that would be
+                the next level of headers.
+            </p>
+
+            <header class="subheader">
+                <h3>Takeaways</h3>
+            </header>
+            <p>
+                I enjoyed learning about the topic of website accessibility, and I will definitely be applying it
+                beyond this class. <b>Developing accessible websites is necessary and will contribute to a more
+                inclusive online world where everyone feels comfortable accessing content.</b>
+            </p>
+
+            <p id="p6">
+                <b>...until next week! :)</b>
+            </p>
+
+            <div id="button-container">
+                <button id="back-to-main"onclick="location.href='index.html'" type="button">Back To Home</button> 
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
