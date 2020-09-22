@@ -187,3 +187,20 @@ body {
 #good-color-text {
     text-align: center;
 }
+
+#video {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+    margin: auto;
+}
+
+.sample-code {
+    text-align: center;
+    background-color:  #eea07c;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    width: 30%;
+}
