@@ -204,3 +204,11 @@ body {
     padding: 15px;
     width: 30%;
 }
+
+#print-method-list {
+    padding-top: 20px;
+}
+
+.print-method-item {
+    padding: 5px;
+}

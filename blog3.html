@@ -16,54 +16,81 @@
         </header>
         <div id="topic-header">
             <header>
-                <h2>Console Hacks Using JavaScript</h2>
+                <h2>Printing in JavaScript</h2>
             </header>
         </div>
         <div id="main-text">
-            <p>This week I decided it was best to look into JavaScript techniques as we will be learning more about it soon.
-                I came across this cool video containing some 'hacks' you can do when printing to the console in JavaScript.
+            <p>This week I decided it was best to look into JavaScript techniques as we will be learning more about it
+                soon.
+                I came across this cool video below containing some 'hacks' you can do when printing to the console in
+                JavaScript.
+                These will definitely be helpful when we start learning about JavaScript and do testing/debugging.</p>
+            <p>Prior to watching this video, I wanted to make sure I was clear on the many different ways to print
+                something
+                in JavaScript. Following this
+                <a href="https://www.w3schools.com/js/js_output.asp" target="_blank">w3schools documentation</a>, I
+                learned that there are actually four different ways
+                to print something in JavaScript:</p>
+            <ul id="print-method-list">
+                <li class="print-method-item"><b>innerHTML</b>: This method prints html elements using JavaScript. To
+                    use this,
+                    simply create a script that references the element and call ".innerHTML" on that element. This
+                    method
+                    is more helpful if you need to know the value of an html element dynamically.
+                </li>
+                <li class="print-method-item"><b>document.write()</b>: This is similar to innerHTML, but if it's used
+                    after the html page is loaded
+                    then it will overwrite all of the HTML. It's recommended that this method should only be used for
+                    testing.
+                </li>
+                <li class="print-method-item"><b>window.alert()</b>: You can place window.alert() in a script and pass
+                    whatever
+                    you want to print as an argument. I think the drawback of this method is that it comes
+                    up as an alert box, so it might get annoying unless you want to see it immediately.
+                </li>
+                <li class="print-method-item"><b>console.log()</b>: The final method that is also referenced in the
+                    video
+                    is console.log(). This will display in the browser and is mainly used for debugging purposes.
+                    In order to see it, you have to open up your browsers developer tools and go to the console to see
+                    it.
+                </li>
+            </ul>
+            <p>
+                This video below talks about two "hacks" when printing to the console.
             </p>
-            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uIeXY9B5ARs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <p> If you are debugging some code and want to quickly see the value of a variable, these suggestions
-                make it easier to view those things when printing to the console.
-            </p>
-
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uIeXY9B5ARs" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             <header class="subheader">
                 <h3>Time Log</h3>
             </header>
-
-            <p> Time log is very helpful when you are trying to measure performance of a function or a portion of code. If you want
-                to time how long something takes to run, you can initialize a timer using: 
-                
-                <pre class="sample-code">console.time('description');</pre> 
-                To print the time at a certain part within your code: 
-                <pre class="sample-code">console.timeLog('description');</pre>
-                To end the timer and print the final result:
-                <pre class="sample-code">console.timeEnd('description');</pre>
-                This funcionality comes in handy when you quickly want to measure the performance of a function.
+            <p> Time log comes in handy when you are trying to measure performance of a function or a portion of code.
+                If you want
+                to time how long something takes to run, you can initialize a timer using:
+            <pre class="sample-code">console.time('description');</pre>
+            To print the time at a certain part within your code:
+            <pre class="sample-code">console.timeLog('description');</pre>
+            To end the timer and print the final result:
+            <pre class="sample-code">console.timeEnd('description');</pre>
             </p>
-
             <header class="subheader">
                 <h3>Table Log</h3>
             </header>
-
             <p>The next console hack is printing an array to the console in the form of a table. If you have an array
                 that has consistent data attributes, you can print it to the console as a table:
-                <pre class="sample-code">console.table(array);</pre>
-                For instance, if you have an array named 'color' with two elements: each containing 'name' and 'favorite color,' you can print
-                that array to the console:
-                <pre class="sample-code">console.table(color);</pre>
-                 The result will be a nicely formatted table. 
+            <pre class="sample-code">console.table(array);</pre>
+            For instance, if you have an array named 'color' with two elements: each containing 'name' and 'favorite
+            color,' you can print
+            that array to the console:
+            <pre class="sample-code">console.table(color);</pre>
+            The result will be a nicely formatted table that displays in the console.
             </p>
-
             <header class="subheader">
                 <h3>Takeaways</h3>
             </header>
             <p>
-                I enjoyed learning about the topic of website accessibility, and I will definitely be applying it
-                beyond this class. <b>Developing accessible websites is necessary and will contribute to a more
-                    inclusive online world where everyone feels comfortable accessing content.</b>
+                I enjoyed learning about this topic and it's interesting to me that there are so many ways to print
+                one value using JavaScript. It increases the flexibility of the language.
             </p>
             <p id="p6">
                 <b>...until next week! :)</b>
