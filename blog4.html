@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Blog 4</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="demo.js" defer></script>
+</head>
+
+<body>
+    <div id="main-col">
+        <header class="top-header">
+            <h1>Web Dev Blog</h1>
+            <h2>Jenna Horrall</h2>
+        </header>
+        <div id="topic-header">
+            <header>
+                <h2>Modals</h2>
+            </header>
+        </div>
+        <div id="main-text">
+            <p>
+                This week I decided to explore modal boxes. I didn't realize how often modal boxes are used today, but
+                I see them quite frequently as login/sign up boxes when visiting a website. Modal boxes extend to cases
+                beyond that
+                as well because they highlight important information that the viewer needs to see right away. According
+                to
+                this <a
+                    href=https://webdesign.tutsplus.com/articles/modal-and-modeless-boxes-in-web-design--webdesign-2282
+                    target="_blank">
+                    blog</a>, there are five use cases that modal boxes are commonly used for:
+            <ul class="modal-case-list">
+                <li><b>Alert</b> the user that an error has occured</li>
+                <li><b>Warn</b> the user of something</li>
+                <li><b>Collect</b> data from users</li>
+                <li><b>Remind</b> user of something before moving on</li>
+                <li><b>Inform</b> users of important information</li>
+            </ul>
+            </p>
+            <header class="subheader">
+                <h3>Basic Modal</h3>
+            </header>
+            <p>
+                Following this
+                <a href="https://www.w3schools.com/howto/howto_css_modals.asp" target="_blank">W3 tutorial</a>,
+                I am going to display a basic modal box below:
+                <!-- begin demo code from w3schools -->
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn">Open Modal</button>
+
+                    <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+
+                </div>
+            </p>
+
+            <p class="p1-txt-blog4">There's quite a lot happening in the background to display this modal box.
+                The button that opens the modal triggers the modal box to display on the screen.
+                The modal is styled in CSS, but it's display property is set to none so that it
+                doesn't display until the button is clicked. Once the button is clicked,
+                the script grabs the modal element and sets it's display to block.
+                I thought I would have to do something
+                fancy to make the background fade out, but you just set the background color of the element
+                to black with a greater opacity level.
+            </p>
+
+            <p class="p1-txt-blog4">
+                One new property tag that I hadn't seen before today was the z-index tag. This is set to 1 for
+                the modal element. This tag essentially moves the element to be at the top of the display stack.
+                It only works with positioned elements, and because the modal element has a fixed position,
+                the element appears to be "on top of" the other elements.
+            </p>
+
+            <p class="p1-txt-blog4">
+                I also learned something new about JavaScript by making this modal box. Instead of including the
+                function inside of the button element using the onclick function, the demo calls onclick in the
+                script directly:</p>
+            <pre id="demo-code-blog4">
+                <code>
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+                </code>
+            </pre>
+            <p class="p1-txt-blog4">I personally think this is cleaner and more concise because the HTML code has
+                content,
+                JavaScript code has functionality, and CSS has styling. Each component only has code
+                pertaining to it's sole function.</p>
+
+            <header class="subheader">
+                <h3>Takeaways</h3>
+            </header>
+            <p>
+                Creating a modal box was very fun and I enjoyed learning about them. They have many uses and it was a
+                lot
+                easier to implement then I had expected.
+            </p>
+            <p id="p6">
+                <b>...until next week! :)</b>
+            </p>
+            <div id="button-container">
+                <button id="back-to-main" onclick="location.href='index.html'" type="button">Back To Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
