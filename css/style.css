@@ -150,8 +150,8 @@ body {
 }
 
 .subheader {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #bad-color-parent {
@@ -285,4 +285,16 @@ body {
 #demo-code-blog4 {
     margin: auto;
     padding-left: 140px;
+}
+
+.blog5-item {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.blog5-main {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
 }
