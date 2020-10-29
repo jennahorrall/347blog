@@ -240,7 +240,6 @@ body {
     /* Black w/ opacity */
 }
 
-
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -250,7 +249,6 @@ body {
     width: 80%;
     /* Could be more or less, depending on screen size */
 }
-
 
 .close {
     color: #aaa;
@@ -297,4 +295,23 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
+}
+
+.body-text {
+    padding-right: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.body-text>li {
+    padding: 20px;
+}
+
+#b6-vid {
+    margin-left: 150px;
+}
+
+#first-paragraph-b6 {
+    padding-top: 0px;
+    margin-top: 0px;
 }

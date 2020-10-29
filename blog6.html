@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Blog 6</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="demo.js" defer></script>
+</head>
+
+<body>
+    <div id="main-col">
+        <header class="top-header">
+            <h1>Web Dev Blog</h1>
+            <h2>Jenna Horrall</h2>
+        </header>
+        <header id="topic-header">
+            <h2>Deeper Dive Into React </h2>
+        </header>
+        <div id="main-text">
+
+            <p class="body-text" id="first-paragraph-b6">
+                This week, I'll be looking more into React. I want to learn more about it before
+                I start working on the next project, so I decided to go with a video this week that has pro tips from
+                React developers with code samples:
+            </p>
+
+            <iframe id="b6-vid" width="560" height="315" src="https://www.youtube.com/embed/xa-_FIy2NgE" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <p class="body-text">
+                After looking through the comments, I noticed that some people were saying these were beginner tips
+                and not pro tips,
+                but either way they will be helpful to a beginner like myself. Below are the 6 tips that the channel
+                "Vue Mastery" says are important when working with React:
+            </p>
+
+            <ol class="body-text">
+
+                <li><b>Use functional components</b>: This means you should use a function-based
+                    component rather than a class-based component. A functional component accepts props as an
+                    argument and returns a React element. Here is an example of a functional component from the
+                    video:
+                    <pre>
+                    <code>
+                      function Welcome(props) {
+                          return &lt;h1&gt; Hi, {props.name}!&lt;/h1 &gt;
+                      }
+                    </code>
+                </pre>
+
+                    This looks pretty different compared to a class-based element:
+                    <pre>
+                    <code>
+                      class Welcome extends Component {
+                          render() {
+                            return &lt;h1&gt; Hi, {this.props.name}!&lt;/h1 &gt;
+                          }
+                      }
+                    </code>
+                </pre>
+                    We saw the function-based component in our lab and video exercises for React.
+                </li>
+
+                <li><b>Keep your components small:</b> There are many benefits to keeping your components
+                    on the smaller end. They are easier to test, read, maintain, and reuse.
+                </li>
+
+                <li><b>Understand how to handle 'this':</b> In a class-based component, you have to handle
+                    'this' by binding it to the functions inside that component. The video recommends
+                    binding the functions in two ways: binding it in the render function and in the constructor.
+                    Binding it in the constructor will have better performance.
+                </li>
+
+                <li><b>Use a function for setState, not an object:</b> Because React does not absolutely
+                    guarantee that the state change will be applied immediately after the change, it
+                    is more safe to use an object for setState rather than reference this.state.
+                </li>
+
+                <li><b>Utilize prop-types:</b> Prop-types is a library that validates the type of props.
+                    It is an external library that you have to install, but it will help prevent bugs.
+                </li>
+
+                <li>
+                    <b>Use React developer tools:</b> In the console, there is a tab for "React" that
+                    allows you to view React components along with their props, state, and context.
+                    This will definitely come in handy when debugging.
+                </li>
+            </ol>
+
+            <p class="body-text">
+                I learned a lot in this video that will definitely be helpful going forward. I learned some new
+                things and was able to relate others back to the labs and exercises we have already done.
+            </p>
+
+            <p id="p6">
+                <b>...until next week! :)</b>
+            </p>
+            <div id="button-container">
+                <button id="back-to-main" onclick="location.href='index.html'" type="button">Back To Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
