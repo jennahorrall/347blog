@@ -313,5 +313,15 @@ body {
 
 #first-paragraph-b6 {
     padding-top: 0px;
-    margin-top: 0px;
+    margin-top: 0px; 
+}
+
+.fetch-code {
+    margin-left: 40%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#basic-fetch-code {
+    margin-top: 10px;
 }

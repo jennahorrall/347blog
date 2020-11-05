@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Blog 7</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="demo.js" defer></script>
+</head>
+
+<body>
+    <div id="main-col">
+        <header class="top-header">
+            <h1>Web Dev Blog</h1>
+            <h2>Jenna Horrall</h2>
+        </header>
+        <header id="topic-header">
+            <h2>Review: HTTP Operations & Fetch</h2>
+        </header>
+        <div id="main-text">
+
+            <p class="body-text" id="first-paragraph-b6">
+                This week, I decided to go back a few steps and do some review. I realized that I'm still a bit confused
+                about HTTP operations and when to post vs. put, etc. I want to make sure I am solid on these concepts
+                before moving forward at all. This can be used as a reference sheet when I begin the project as well.
+                So, in this post I'm going to discuss HTTP operations
+                and when each operation should be used. I'm also going to review the fetch operation.
+                I followed <a href="https://restfulapi.net/http-methods/" target="_blank">this</a>
+                tutorial for information on HTTP Operations described below.
+            </p>
+
+            <header class="subheader">
+                <h3>GET</h3>
+            </header>
+            <p class="body-text">HTTP GET is used only to retrieve information from some location. <b>This should
+                    not be used to modify a resource in any way</b>, and is considered a safe operation because of that.
+                In the recent lab we did to make a chat service, we have a GET operation for when the client wants
+                to access the updated chat messages. The client sends the current index of the messages array, and
+                receives a response that has an array of the messages that have not been downloaded or accessed yet.
+            </p>
+
+            <header class="subheader">
+                <h3>POST</h3>
+            </header>
+            <p class="body-text">HTTP POST is used to create a new "subordinate" resources as defined in the tutorial.
+                In the chat lab, we did a POST operation for when the client sends a message. This operation represents
+                the client sending a message to be stored on the server, and in this case we add the message that was
+                "posted" via HTTP to the messages array on the server. <b>POST should be used when you want to create a
+                    new
+                    resource.</b>
+            </p>
+
+            <header class="subheader">
+                <h3>PUT</h3>
+            </header>
+            <p class="body-text">HTTP PUT is used to update an existing resource. I think this is where I mainly got
+                confused
+                on the lab. I figured because the messages array already existed and we were just updating it
+                by adding a new message, we would
+                use the PUT operation instead of POST. After doing further research and coming across this
+                <a href="https://restfulapi.net/rest-put-vs-post/" target="_blank">tutorial</a> on restful api, I
+                learned that because
+                we
+                were <b>creating</b> a new message and adding that to the messages array, an HTTP POST would be the best
+                operation to
+                achieve this. If we wanted to edit a message that has already been sent, then a PUT operation would work
+                better because
+                the resource is already on the server, we would just need to update it.
+            </p>
+
+            <header class="subheader">
+                <h3>DELETE</h3>
+            </header>
+            <p class="body-text">HTTP DELETE is used when you want to delete an existing resource. In the case of the
+                chat lab, if we wanted to delete a message or a group of messages, we could use this operation to
+                achieve this.
+            </p>
+
+            <header class="subheader">
+                <h3>PATCH</h3>
+            </header>
+            <p class="body-text">HTTP PATCH is used to "make a partial update on a resource." HTTP PUT also updates an
+                existing resource,
+                but the difference is that PATCH updates only part of a resource and PUT completely replaces a resource.
+                For example,
+                let's say you do a GET request and receive this user information: {id: 12345, username: jennahorrall,
+                email: horraljk@dukes.jmu.edu}.
+                If you were to do a PUT operation on that record to udpate it, then this whole record would be updated
+                with new information. If
+                you only wanted to update the email field, then a PATCH operation could be used to achieve that.
+            </p>
+
+            <header class="subheader">
+                <h3>Fetch Function</h3>
+            </header>
+            <p class="body-text">
+                Fetch was confusing to me previously because I did not fully understand the HTTP operations being
+                used. Now that I have a more solid understanding of these operations, I think fetch will be easier.
+                Following this <a href="https://www.javascripttutorial.net/javascript-fetch-api/"
+                    target="_blank">tutorial</a>, I'm
+                going
+                to review the Fetch API. The Fetch API is "a modern interface that allows you to make
+                HTTP requests to servers from web browsers."
+            </p>
+            <p class="body-text">
+            Here's a basic fetch call:
+            <pre class="fetch-code" id="basic-fetch-code"><code>let response = fetch(url);</code></pre>
+            The fetch function <b>returns a Promise</b>. This is used to handle the information that is returned from the call
+            to
+            fetch.
+            You can use .then() and .catch() operations to handle the Promise that's returned:
+            <pre class=fetch-code><code>fetch(url)
+.then(response => {
+    // handle the response
+})
+catch(error => {
+    // handle the error
+});</code></pre>
+
+            The response that is returned from fetch is a wrapper around the actual data that's returned, and it makes
+            it easier
+            to process the data that's returned.
+            </p>
+
+            <p class="body-text">In the chat lab we did, the fetch function was used in two different functions: push()
+                and pull().</p>
+
+            <p class="body-text">In the <b>push</b> function, we used fetch to POST the new message to the server after
+                the
+                client sent a message
+                using the send button. We were creating a new resource
+                on the server, therefore we had to send additional data in the fetch request through the options
+                parameter in order to specify the POST operation. The
+                message object was in the body of the request, and the message was processed on the server side using
+                the
+                POST operation.
+                On the server, the data was received in the body and then added to the messages array.
+            </p>
+
+            <p class="body-text">
+                In the <b>pull</b> function, we used fetch for a different reason. The pull function was supposed to get
+                the
+                existing messages
+                on the server that had not been seen by the client yet. This meant that the client only needed to
+                retrieve
+                existing
+                information on the server, nothing else. The fetch call in the pull function corresponded to the
+                server's POST operation
+                for the endpoint "/messages/{index}". This function was executed every second to ensure the messages
+                were
+                continuously
+                being updated.
+            </p>
+
+            <p class="body-text">
+                This blog really solidified my understanding of HTTP Operations and their corresponding call to fetch. I
+                feel a lot
+                more confident in my ability to implement this functionality in the future.
+            </p>
+
+
+            <p id="p6">
+                <b>...until next week! :)</b>
+            </p>
+            <div id="button-container">
+                <button id="back-to-main" onclick="location.href='index.html'" type="button">Back To Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
