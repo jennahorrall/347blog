@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Blog 8</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="demo.js" defer></script>
+</head>
+
+<body>
+    <div id="main-col">
+        <header class="top-header">
+            <h1>Web Dev Blog</h1>
+            <h2>Jenna Horrall</h2>
+        </header>
+        <header id="topic-header">
+            <h2>Review: React Hooks</h2>
+        </header>
+        <div id="main-text">
+
+            <p class="body-text">
+                This week I decided to look more into React hooks. Up until now, I haven't really taken the time to truly understand 
+                how hooks function on a deeper level. It makes sense in the labs and videos, but if I had to implement them on my own without 
+                direction, I would most likely struggle. All good skills take lot of practice though, and I will definitely be getting 
+                that practice on the upcoming project. This blog will come in handy at that point.
+            </p>
+
+            <header class="subheader">
+                <h3>The State Hook</h3>
+            </header>
+
+            <p class="body-text">
+                According to React 
+                <a href="https://reactjs.org/docs/hooks-state.html" target="_none">documentation</a>
+                , the state hook was introduced in v16.8 
+                to allow people to use the state feature without writing an actual class.
+                Previously, you would have to make a class that 'extended' React.component. 
+                The class would set it's state values in the constructor, and then you would use 
+                'this' to set the state when a change occured. I'm not going to go too much more 
+                into React classes because we won't be using them at all, but React's new functional 
+                components and state hooks are much cleaner compared to the classes.
+            </p>
+
+            <p class="body-text">
+                Before I go into actual the functionality of state hooks, I want to clarify what a state 
+                is and when you would need to use one. I found this helpful github 
+                <a href="https://github.com/uberVU/react-guide/blob/master/props-vs-state.md" target="_none">documentation</a> 
+                about props and state. <b>"The state starts with a default value when a Component
+                mounts and then has mutations over time (mostly generated from user events). It's a 
+                serializable representation of one point in time - a snapshot."</b> If at any point you 
+                need to add dynamic behavior based on some action by the user, you will need a state.
+                In the case of the github lab, we needed to add a state for the query input 
+                that was provided by the user, because that input led to a dynamic event 
+                which generated search results (represented by repository components).
+            </p>
+
+            <p class="body-text">
+                The state hook actually creates a state and allows you to change it later.
+                Here is a simple example:
+                <div class="flex-code-container"><pre class="code"><code>const [count, setCount] = useState(0);</code></pre></div>
+            </p>
+
+            <p class="body-text">
+            The useState() function returns two values: the state variable (count), and a function to set a new
+            state (setCount). The argument in useState (in this case 0) is the initial value of 
+            the state. You can use the setCount function after the user has made some change,
+            like pressing a button or adding some input. A state to me is basically a fancy event listener in React
+            (if you apply it to some onChange event for an element).
+            </p>
+
+            <header class="subheader">
+                <h3>The Effect Hook</h3>
+            </header>
+
+            <p class="body-text">
+                We've learned up to this point that a hook is a special function 
+                that lets you gain access to React features from components. The 
+                effect hook is a bit different from the state hook. You would use 
+                an effect hook when you want to make a "side effect" operation, 
+                according to React documentation. Examples of this operation 
+                include fetching some 
+                data, setting up a subscription, and manually changing the DOM in 
+                a component. 
+                Here is a simple example: 
+                <div class="flex-code-container"><pre class="code"><code>useEffect(() => {
+    document.title = `You clicked ${count} times`;
+);</code></pre></div>
+            </p>
+
+            <p class="body-text">
+                In the effect hook above, React knows to call this 
+                effect after the DOM has been updated. The useEffect function
+                runs after every render. A nice feature of useEffect()
+                is that you can return a cleanup function inside useEffect(). 
+                This will run when the 
+                component 'unmounts' and also after every render.
+            </p>
+
+            <header class="subheader">
+                <h3>Tips for Using Hooks</h3>
+            </header>
+
+            <p class="body-text">
+                Below are some tips for using hooks from React docs:
+                <ol>
+                    <li>
+                        <b>Only call hooks at the top level</b>: don't use hooks inside
+                        loops, conditions, or nested functions.
+                    </li>
+                    <li>
+                        <b>Only call hooks from React functions</b>: Don't call 
+                        hooks from regular JS functions.
+                    </li>
+                    <li>
+                        <b>Install ESLint!</b>: This plugin, released by React,
+                        enforces both of the above tips.
+                    </li>
+                </ol>
+            </p>
+
+            <p class="body-text">
+                I enjoyed taking this time to gain a more in-depth view of hooks using React. I feel a lot 
+                more confident in my ability to apply the use of hooks on my own, and I am excited to apply these 
+                skills to the upcoming project. 
+            </p>
+
+            <p id="p6">
+                <b>...until next week! :)</b>
+            </p>
+            <div id="button-container">
+                <button id="back-to-main" onclick="location.href='index.html'" type="button">Back To Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
